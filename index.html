@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GabaoNGL - Accueil</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body class="glass-bg">
+  <main class="center-box">
+    <h1>💬 GabaoNGL</h1>
+    <p>Reçois des messages anonymes avec ton lien personnel</p>
+    <form id="usernameForm">
+      <input type="text" id="username" placeholder="Ton pseudo Gabao" required />
+      <button type="submit">Créer mon lien</button>
+    </form>
+  </main>
+  <script>
+    document.getElementById('usernameForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value.trim();
+      if (username) {
+        window.location.href = '/u/' + encodeURIComponent(username) + '.html';
+      }
+    });
+  </script>
+</body>
+</html>
