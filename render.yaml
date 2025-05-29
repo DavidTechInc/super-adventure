@@ -1,0 +1,7 @@
+services:
+  - type: static
+    name: gabao-ngl
+    env: static
+    buildCommand: ""
+    staticPublishPath: /
+    branch: main
