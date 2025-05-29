@@ -1,7 +1,7 @@
 services:
-  - type: static
-    name: gabao-ngl
-    env: static
-    buildCommand: ""
-    staticPublishPath: /
+  - type: web
+    name: super-adventure
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
     branch: main
